@@ -6,6 +6,7 @@ import Cadastrar_Usuarios from './components/cadastrar_usuario';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider, useAuth } from './components/AuthProvider';
+import Cadastrar_Parceiro from './components/cadastrar_parceiro';
 
 const ProtectedRoute = ({ children }) => {
   const { autenticado } = useAuth();
@@ -33,6 +34,8 @@ const RoutesWithAuth = () => {
         <Route path="/tarefas" element={<ProtectedRoute><Cadastrar_Tarefas /></ProtectedRoute>} />
         <Route path="/manutencao" element={<ProtectedRoute><Manutencao_Tarefas /></ProtectedRoute>} />
         <Route path="/usuarios" element={<ProtectedRoute><Cadastrar_Usuarios /></ProtectedRoute>} />
+        <Route path="/parceiros" element={<ProtectedRoute><Cadastrar_Parceiro /></ProtectedRoute>} />
+        
       </Routes>
     </Router>
   );
