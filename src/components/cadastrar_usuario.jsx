@@ -8,7 +8,7 @@ const Cadastrar_Usuario = () => {
 
   const salvar = async (campos) => {
     try {
-      const response = await api.post("usuarios", campos);
+      const response = await api.post("usuarios/createUsers", campos);
       setAviso(`Usuário cadastrado com sucesso!"`);
       reset();
     } catch (error) {
@@ -43,13 +43,13 @@ const Cadastrar_Usuario = () => {
             />
           </div>
           <div className="form-group mt-2">
-            <label htmlFor="status">Senha:</label>
+            <label htmlFor="password">Senha:</label>
             <input
               type="password"
               className="form-control"
-              id="senha"
+              id="password"
               required
-              {...register("senha")}
+              {...register("password")}
             />
           </div>
                    
