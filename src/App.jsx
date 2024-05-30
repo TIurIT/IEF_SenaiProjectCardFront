@@ -1,12 +1,12 @@
 import Cadastrar_card from './components/cadastrar_card';
 import Menu_Superior from './components/MenuSuperior';
-import Manutencao_Tarefas from './components/manutencao_tarefas';
 import FormularioLogin from './components/login';
 import Cadastrar_Usuarios from './components/cadastrar_usuario';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider, useAuth } from './components/AuthProvider';
 import Cadastrar_Parceiro from './components/cadastrar_parceiro';
+import ControleCartas from './components/ControleCartas';
 
 const ProtectedRoute = ({ children }) => {
   const { autenticado } = useAuth();
@@ -31,8 +31,8 @@ const RoutesWithAuth = () => {
         <Route path="/" element={autenticado ? (<Cadastrar_card /> // Use replace to prevent history stack issues
             ) : <FormularioLogin />}
         />
-        <Route path="/card" element={<ProtectedRoute><Cadastrar_card /></ProtectedRoute>} />
-        <Route path="/manutencao" element={<ProtectedRoute><Manutencao_Tarefas /></ProtectedRoute>} />
+        <Route path="/cartas" element={<ProtectedRoute><Cadastrar_card /></ProtectedRoute>} />
+        <Route path="/controle" element={<ProtectedRoute><ControleCartas/></ProtectedRoute>} />
         <Route path="/usuarios" element={<ProtectedRoute><Cadastrar_Usuarios /></ProtectedRoute>} />
         <Route path="/parceiros" element={<ProtectedRoute><Cadastrar_Parceiro /></ProtectedRoute>} />
         

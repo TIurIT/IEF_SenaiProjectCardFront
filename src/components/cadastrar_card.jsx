@@ -8,7 +8,7 @@ const Cadastrar_card = () => {
 
   const salvar = async (campos) => {
     try {
-      const response = await api.post("card/createCard", campos);
+      const response = await api.post("cartas/createCard", campos);
       setAviso(`Carta cadastrada com sucesso!"`);
       reset();
     } catch (error) {
@@ -22,7 +22,7 @@ const Cadastrar_card = () => {
         <h4 className="fst-italic mb-3">Cadastrar Carta</h4>
         <form onSubmit={handleSubmit(salvar)}>
           <div className="form-group">
-            <label htmlFor="name">Titulo</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               className="form-control"
