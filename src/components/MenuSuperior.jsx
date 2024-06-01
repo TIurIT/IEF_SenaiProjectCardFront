@@ -1,25 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, Router, Routes } from "react-router-dom";
+
+const logout = () => {
+  setAutenticado(false);
+};
 
 const MenuSuperior = () => {
   return (
-    <nav className="navbar navbar-expand-sm bg-primary navbar-dark sticky-top">
+    <nav className="navbar navbar-expand-sm bg-danger navbar-dark sticky-top">
       <div className="container">
-        <Link to="/" className="navbar-brand">Controle de Estoque</Link>
+        <Link to="/" className="navbar-brand text-dark align-self-start">INÍCIO</Link>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/" className="nav-link">Incluir Carta</Link>
+            <Link to="/cartas" className="nav-link text-dark">Incluir Carta</Link>
           </li>
           <li className="nav-item">
-            <Link to="/controle" className="nav-link">Controle de Cartas</Link>
+            <Link to="/controle" className="nav-link text-dark">Controle de Cartas</Link>
           </li>
           <li className="nav-item">
-            <Link to="/usuarios" className="nav-link">Cadastrar Usuário</Link>
+            <Link to="/usuarios" className="nav-link text-dark">Cadastrar Usuário</Link>
           </li>
           <li className="nav-item">
-          <Link to="/parceiros" className="nav-link">Cadastrar Parceiro</Link>
-          </li>
-          <li className="nav-item">
-            <button className="btn btn-sm btn-outline-secondary">
+            <button className="btn btn-self-center btn-outline-dark" onClick={logout}>
               Logout
             </button>
           </li>

@@ -5,7 +5,6 @@ import Cadastrar_Usuarios from './components/cadastrar_usuario';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider, useAuth } from './components/AuthProvider';
-import Cadastrar_Parceiro from './components/cadastrar_parceiro';
 import ControleCartas from './components/ControleCartas';
 
 const ProtectedRoute = ({ children }) => {
@@ -34,7 +33,6 @@ const RoutesWithAuth = () => {
         <Route path="/cartas" element={<ProtectedRoute><Cadastrar_card /></ProtectedRoute>} />
         <Route path="/controle" element={<ProtectedRoute><ControleCartas/></ProtectedRoute>} />
         <Route path="/usuarios" element={<ProtectedRoute><Cadastrar_Usuarios /></ProtectedRoute>} />
-        <Route path="/parceiros" element={<ProtectedRoute><Cadastrar_Parceiro /></ProtectedRoute>} />
         
       </Routes>
     </Router>

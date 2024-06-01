@@ -16,7 +16,7 @@ const ItemLista = ({
             <td>{quantidade}</td>
             <td class="text-center">
                 <i className="exclui text-danger fw-bold" title="Excluir" onClick={excluirClick}>&#215;</i>
-                <i className="altera text-sucess fw-bold ms-2" title="Alterar" onClick={alterarClick}>&#177;</i>
+                <i className="altera text-primary fw-bold ms-2" title="Alterar" onClick={alterarClick}>&#177;</i>
             </td>
         </tr>
     );

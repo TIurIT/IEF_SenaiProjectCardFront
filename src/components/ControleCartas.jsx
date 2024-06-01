@@ -77,7 +77,8 @@ const alterar = async (id,nome) => {
 }
 
     return (
-       <div className="container">
+    <div className="container-fluid bg-dark text-light min-vh-100 align-items-center-top">
+       <div className="container bg-dark text-light">
         <div className="row">
             <div className="col-sm-7">
                 <h4 className="fst-italic mt-3">Controle de Cartas</h4>
@@ -93,7 +94,7 @@ const alterar = async (id,nome) => {
             </div>
         </div>
 
-        <table className="table table-striped mt-3">
+        <table className="table table-dark table-striped mt-3">
             <thead>
                 <tr>
                     <th>Cód.</th>
@@ -117,8 +118,8 @@ const alterar = async (id,nome) => {
                 ))}
             </tbody>
         </table>
-
        </div> 
+    </div>
     );
 };
 
