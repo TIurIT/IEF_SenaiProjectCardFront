@@ -30,8 +30,8 @@ const RoutesWithAuth = () => {
         <Route path="/" element={autenticado ? (<Cadastrar_card /> // Use replace to prevent history stack issues
             ) : <FormularioLogin />}
         />
-        <Route path="/cartas" element={<ProtectedRoute><Cadastrar_card /></ProtectedRoute>} />
-        <Route path="/controle" element={<ProtectedRoute><ControleCartas/></ProtectedRoute>} />
+        <Route path="/cartas/createCard" element={<ProtectedRoute><Cadastrar_card /></ProtectedRoute>} />
+        <Route path="/cartas" element={<ProtectedRoute><ControleCartas/></ProtectedRoute>} />
         <Route path="/usuarios" element={<ProtectedRoute><Cadastrar_Usuarios /></ProtectedRoute>} />
         
       </Routes>

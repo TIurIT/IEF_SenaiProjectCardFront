@@ -12,7 +12,7 @@ const ControleCartas = () => {
 
     const obterLista = async () => {
         try{
-            const lista = await api.get("cartas/all");
+            const lista = await api.get(`cartas/all`);
             setCard(lista.data);
         }catch(error){
             alert(`Erro: ..Não foi possível obter os dados: ${error}`);
@@ -77,8 +77,8 @@ const alterar = async (id,nome) => {
 }
 
     return (
-    <div className="container-fluid bg-dark text-light min-vh-100 align-items-center-top">
-       <div className="container bg-dark text-light">
+    <div className="container-fluid bg-dark text-danger min-vh-100 align-items-center-top">
+       <div className="container bg-dark text-danger">
         <div className="row">
             <div className="col-sm-7">
                 <h4 className="fst-italic mt-3">Controle de Cartas</h4>

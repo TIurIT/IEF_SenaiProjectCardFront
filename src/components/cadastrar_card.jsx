@@ -17,8 +17,8 @@ const Cadastrar_card = () => {
   };
 
   return (
-    <div className="container-fluid bg-dark text-light min-vh-100 d-flex align-items-center">
-      <div className="container p-5 bg-light text-dark rounded">
+    <div className="container-fluid bg-danger text-light min-vh-100 d-flex align-items-center">
+      <div className="container p-5 bg-dark text-danger rounded">
         <h4 className="fst-italic mb-3">Cadastrar Carta</h4>
         <form onSubmit={handleSubmit(salvar)}>
           <div className="form-group">
