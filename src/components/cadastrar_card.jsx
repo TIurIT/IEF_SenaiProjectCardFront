@@ -9,7 +9,7 @@ const Cadastrar_card = () => {
   const salvar = async (campos) => {
     try {
       const response = await api.post("cartas/createCard", campos);
-      setAviso(`Carta cadastrada com sucesso!"`);
+      setAviso(`Carta cadastrada com sucesso!`);
       reset();
     } catch (error) {
       setAviso("Erro ao cadastrar Carta!");
