@@ -8,7 +8,7 @@ const MenuSuperior = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
       <div className="container">
-        <Link to="/" className="navbar-brand text-danger align-self-start">INÍCIO</Link>
+        <Link to="/" className="navbar-brand text-danger align-self-start">Cardsin IT</Link>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link to="/cartas/createCard" className="nav-link text-danger">Incluir Carta</Link>
